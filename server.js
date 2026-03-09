@@ -53,7 +53,7 @@ app.post("/login", (req, res) => {
 
   saveLogins(logins);
 
-  res.redirect("https://www.hackerrank.com/YOUR-CONTEST-LINK");
+  res.redirect("https://www.hackerrank.com/cuc");
 });
 
 app.listen(3000, () => {
