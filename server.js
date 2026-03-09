@@ -25,10 +25,10 @@ app.get("/admin", (req,res)=>{
 
 app.post("/login", (req, res) => {
 
-    const sebHeader = req.headers["x-safeexambrowser"];
+    const userAgent = req.headers["user-agent"] || "";
 
-    if (!sebHeader) {
-    return res.send("Open this page using Safe Exam Browser.");
+    if (!userAgent.includes("SEB")) {
+        return res.send("Open this page using Safe Exam Browser.");
     }
 
   const { name, roll, email } = req.body;
